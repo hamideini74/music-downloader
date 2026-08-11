@@ -1,0 +1,23 @@
+# Test your FastAPI endpoints
+
+GET http://127.0.0.1:8000/
+Accept: application/json
+
+###
+POST http://127.0.0.1:8000/api/v1/download
+Content-Type: application/json
+Accept: application/json
+
+{
+    "download_url": "https://aud.navahang.net/media/2013/mp3/03/lq/Moein%20Siavash%20Ghomayshi%20-%20Parandeh.mp3"
+}
+### Download single song
+
+POST http://127.0.0.1:8000/api/v1/download
+Content-Type: application/json
+
+{
+  "artist": "Moein & Siavash Ghomayshi",
+  "title": "Parandeh",
+  "download_url": "https://aud.navahang.net/media/2013/mp3/03/lq/Moein%20Siavash%20Ghomayshi%20-%20Parandeh.mp3"
+}
